@@ -1,0 +1,125 @@
+.horoskop {
+    text-align: center;
+    margin: 2%;
+}
+
+.fullScreenLayout {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: -1;
+    text-align: center;
+}
+
+.home {
+    background-image: url("../images/header.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+    color: white;
+}
+
+.main-container {
+    min-height: 100vh;
+    position: relative;
+    box-shadow: 5px 0 20px black, -5px 0 20px black;
+}
+
+.horoskop-parent {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    font-size: 100px;
+    color: darkblue;
+}
+
+.message {
+    resize: none;
+}
+
+#content-wrap {
+    padding-bottom: 4rem;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background: grey;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.week {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    background: rgba(47, 54, 138, 0.8);
+}
+
+#nav .nav-link {
+    color: white;
+}
+
+#nav .nav-link:hover {
+    color: #090a56;
+}
+
+.navbar-nav .dropdown-menu {
+    background: rgba(47, 54, 138, 0.8);
+}
+
+.navbar-nav .dropdown-item {
+    color: white;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background: rgba(47, 54, 138, 0.8);
+    color: #090a56;
+}
+
+.navbar-dark .navbar-nav .nav-item .nav-link:hover {
+    color: #090a56;
+}
+
+.side {
+    height: 100%;
+}
+
+p {
+    text-align: justify;
+}
+
+#homepage {
+    color: black;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9); /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.8);
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5),
+    -1px -1px 0 rgba(0, 0, 0, 0.5),
+    1px -1px 0 rgba(0, 0, 0, 0.5),
+    -1px 1px 0 rgba(0, 0, 0, 0.5),
+    1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.padding {
+    padding: 10px;
+}
+
+.img {
+    padding-right: 10px;
+}
+
+.App {
+    background-image: url('../images/background.png');
+}
