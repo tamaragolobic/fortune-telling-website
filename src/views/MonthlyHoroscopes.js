@@ -77,26 +77,27 @@ const MonthlyHoroscopes = () => {
             {
                 horoscopes.map((element, index) => {
                     return (
-                        <div className='col-8 horoskop'
+                        <div className='col-10 horoskop'
                              key={`monthlyhoroscopes${index}`}
                         >
                             <div className="card">
                                 <div className="card-body">
                                     <h6 className="card-title">
-                                        {element.month.to} {element.year}
+                                        {element.month} {element.year}
                                     </h6>
                                     {
                                         element.text.length > MAX_LENGTH ?
                                             <div>
-                                                <div className="card-text">
+                                                <p className="card-text">
                                                     {element.text.substring(0, MAX_LENGTH)}
-                                                </div>
-                                                <Link to={'/mesecni_horoskop/' + element.year + '/' + element.month}>
+                                                </p>
+                                                <Link to={'/horoskop/mesecni/' + element.year + '/' + element.month}>
                                                     Preberi več
                                                 </Link>
-                                            </div> : <div className="card-text">
-                                                {element.text}
                                             </div>
+                                            : <p className="card-text">
+                                                {element.text}
+                                            </p>
                                     }
                                 </div>
                             </div>

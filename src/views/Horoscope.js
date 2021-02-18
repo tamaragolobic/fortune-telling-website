@@ -101,7 +101,7 @@ const Horoscope = (props) => {
             {
                 horoscope.map((element, index) => {
                     return (
-                        <div className='col-8 horoskop'
+                        <div className=' horoskop'
                              key={`horoscopes${index}`}
                         >
                             {
@@ -129,9 +129,9 @@ const Horoscope = (props) => {
                         </div>
                     )
                 })
-                }
-                </div>
-                );
             }
+        </div>
+    );
+}
 
-            export default Horoscope;
+export default Horoscope;

@@ -108,9 +108,9 @@ const WeeklyHoroscopes = () => {
                                                 <h6>
                                                     {element.sign}
                                                 </h6>
-                                                <div>
+                                                <p>
                                                     {element.horoscope}
-                                                </div>
+                                                </p>
                                             </div>
                                         </div>
                                     )

@@ -113,16 +113,16 @@ const Horoscopes = () => {
                                 {
                                     element.horoscope.length > MAX_LENGTH ?
                                         <div>
-                                            <div className="horoscope">
+                                            <p className="horoscope">
                                                 {element.horoscope.substring(0, MAX_LENGTH)}
-                                            </div>
-                                            <Link to={'/horoskop/' + element.sign}>
+                                            </p>
+                                            <Link to={'/horoskop/splosni/' + element.sign}>
                                                 Preberi več
                                             </Link>
                                         </div>
-                                        : <div className="horoscope">
+                                        : <p className="horoscope">
                                             {element.horoscope}
-                                        </div>
+                                        </p>
                                 }
                             </div>
                         </div>
