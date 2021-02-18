@@ -50,7 +50,8 @@
     left: 0;
     width: 100%;
     height: 4rem;
-    background: grey;
+    background: rgba(26, 50, 88, 0.9);
+    color: white;
 }
 
 .container {
@@ -94,6 +95,7 @@ nav {
 
 .side {
     height: 100%;
+    float: right;
 }
 
 p {
@@ -116,10 +118,20 @@ p {
     padding: 10px;
 }
 
-.img {
-    padding-right: 10px;
-}
-
 .App {
     background-image: url('../images/background.png');
+}
+
+.active {
+    background: rgba(43, 28, 96, 0.6);
+    border-radius: 15px;
+}
+
+.names {
+    margin-top: 20px;
+    width: 300px;
+}
+
+#donations {
+    width: 50%;
 }

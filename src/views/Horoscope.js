@@ -99,10 +99,10 @@ const Horoscope = (props) => {
     return (
         <div className='fullScreenLayout'>
             {
-                horoscope.map((element, index) => {
+                horoscope.map((element, signIndex) => {
                     return (
-                        <div className='col-8 horoskop'
-                             key={`horoscopes${index}`}
+                        <div className=' horoskop'
+                             key={`sign${signIndex}`}
                         >
                             {
                                 props.match.params.sign === element.sign ?
@@ -113,13 +113,15 @@ const Horoscope = (props) => {
                                         {element.date}
                                         {
                                             props.match.params.sign === element.sign ?
-                                                element.horoscopes.map((element, index) => {
-                                                    return <div key={`horoscopess${index}`}>
-                                                        {element.title}
-                                                        <p>
-                                                            {element.text}
-                                                        </p>
-                                                    </div>
+                                                element.horoscopes.map((element, horoscopeIndex) => {
+                                                    return (
+                                                        <div key={`sign${signIndex}horoscopes${horoscopeIndex}`}>
+                                                            {element.title}
+                                                            <p>
+                                                                {element.text}
+                                                            </p>
+                                                        </div>
+                                                    )
                                                 })
                                                 : null
                                         }
@@ -129,9 +131,9 @@ const Horoscope = (props) => {
                         </div>
                     )
                 })
-                }
-                </div>
-                );
             }
+        </div>
+    );
+}
 
-            export default Horoscope;
+export default Horoscope;

@@ -23,7 +23,7 @@ const MonthlyHoroscope = (props) => {
             {
                 horoscope.map((element, index) => {
                     return (
-                        <div className='col-8 horoskop'
+                        <div className='horoskop'
                              key={`monthlyhoroscope${index}`}
                         >
                             {

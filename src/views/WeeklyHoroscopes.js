@@ -83,10 +83,10 @@ const WeeklyHoroscopes = () => {
     return (
         <div>
             {
-                horoscope.map((week, index) => {
+                horoscope.map((week, dateIndex) => {
                     return (
                         <div className='horoskop-parent flex-wrap'
-                             key={`weeklyhoroscope${index}`}
+                             key={`date${dateIndex}`}
                         >
                             <div className="card col-12 horoskop">
                                 <div className="card-body week">
@@ -96,10 +96,10 @@ const WeeklyHoroscopes = () => {
                                 </div>
                             </div>
                             {
-                                week.horoscope.map((element, index) => {
+                                week.horoscope.map((element, horoscopeIndex) => {
                                     return (
                                         <div className="card col-md-5 col-xl-3 horoskop"
-                                             key={`weeklyhoroscopee${index}`}
+                                             key={`date${dateIndex}horoscope${horoscopeIndex}`}
                                         >
                                             <div className="card-body">
                                                 <Icon icon={element.icon}
@@ -108,9 +108,9 @@ const WeeklyHoroscopes = () => {
                                                 <h6>
                                                     {element.sign}
                                                 </h6>
-                                                <div>
+                                                <p>
                                                     {element.horoscope}
-                                                </div>
+                                                </p>
                                             </div>
                                         </div>
                                     )

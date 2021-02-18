@@ -56,7 +56,6 @@ const info = () => {
                                     element.picture ?
                                         <img
                                             src={element.picture}
-                                            className='float-left img'
                                             alt='image'
                                         />
                                         : null
