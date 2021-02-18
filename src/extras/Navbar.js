@@ -62,13 +62,13 @@ const Navbar = () => {
         const route = window.location.pathname;
         const links = document.getElementsByClassName('active');
 
-        for (let i = 0; i < links.length; i++) {
-            links[i].classList.remove('active');
+        for (let link of links) {
+            link.classList.remove('active');
         }
-        for(let i=0; i<elements.length; i++) {
-            if(route === elements[i].path) {
-                console.log('ID', elements[i].id);
-                document.getElementById(elements[i].id).classList.add('active');
+
+        for (let element of elements) {
+            if (route === element.path) {
+                document.getElementById(element.id).classList.add('active');
             }
         }
     });
@@ -94,11 +94,11 @@ const Navbar = () => {
                  id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                     {
-                        elements.map((element, index) => {
+                        elements.map((element, navbarIndex) => {
                             return element.type === 'link'
                                 ? (
                                     <li className="nav-item"
-                                        key={`navbar${index}`}
+                                        key={`navbar${navbarIndex}`}
                                     >
                                         <Link className="nav-link"
                                               to={element.path}
@@ -110,7 +110,7 @@ const Navbar = () => {
                                 )
                                 : (
                                     <li className="nav-item dropdown"
-                                        key={`navbarr${index}`}
+                                        key={`navbar${navbarIndex}`}
                                     >
                                         <a className="nav-link dropdown-toggle"
                                            href="#"
@@ -125,9 +125,9 @@ const Navbar = () => {
                                             aria-labelledby="navbarDropdownMenuLink"
                                         >
                                             {
-                                                element.items.map((item, index) => {
+                                                element.items.map((item, itemIndex) => {
                                                     return (
-                                                        <li key={`item${index}`}>
+                                                        <li key={`navbar${navbarIndex}item${itemIndex}`}>
                                                             <Link className="dropdown-item"
                                                                   to={item.path}
                                                                   id={item.id}

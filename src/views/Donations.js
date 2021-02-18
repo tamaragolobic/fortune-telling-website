@@ -2,19 +2,17 @@ import React from 'react';
 import paypalLogo from '../images/paypal-logo.png';
 
 const donations = () => {
-    const openInNewTab = (url) => {
-        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-        if (newWindow) newWindow.opener = null
-    }
+    const link = process.env.REACT_APP_PAYPAL;
+    console.log('env ', link);
 
     return (
         <div className='fullScreenLayout'>
-            <a href='https://paypal.me/jozicvetnik'
+            <a href={link}
                target='_blank'
             >
                 <img src={paypalLogo}
                      className="card-img-top"
-                     alt="..."
+                     alt="Paypal logo"
                      id='donations'
                 />
             </a>
