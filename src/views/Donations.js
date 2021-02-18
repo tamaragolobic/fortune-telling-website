@@ -2,12 +2,9 @@ import React from 'react';
 import paypalLogo from '../images/paypal-logo.png';
 
 const donations = () => {
-    const link = process.env.REACT_APP_PAYPAL;
-    console.log('env ', link);
-
     return (
         <div className='fullScreenLayout'>
-            <a href={link}
+            <a href={process.env.REACT_APP_PAYPAL}
                target='_blank'
             >
                 <img src={paypalLogo}
